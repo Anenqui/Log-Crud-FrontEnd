@@ -1,19 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider } from "./context/AuthContext.jsx";
 import TaskPage from "./pages/TaskPage";
 import HomePage from "./pages/HomePage";
 import TaskFormPage from "./pages/TaskFormPage";
 import ProfilePage from "./pages/ProfilePage";
 import ProtectedRoute from "./ProtectedRoute";
 import { TaskProvider } from "./context/Task Context";
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
   return (
     <AuthProvider>
       <TaskProvider>
         <BrowserRouter>
+        <Navbar/>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />

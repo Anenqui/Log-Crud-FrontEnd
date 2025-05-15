@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form"
 import { registerRequest } from "../api/auth"
-import { useAuth } from "../context/AuthContext"
+import { useAuth } from "../context/AuthContext.jsx"
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { Link } from 'react-router';
