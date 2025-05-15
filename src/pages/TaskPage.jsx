@@ -1,6 +1,7 @@
- import { useEffect } from "react";
+import { useEffect } from "react";
 import {useAuth} from "../context/AuthContext.jsx";
 import { useTasks } from "../context/Task Context";
+import TaskCard from "../components/TaskCard.jsx";
 
  function TaskPage(){
   const {getTask, tasks}=useTasks();
@@ -12,12 +13,9 @@ import { useTasks } from "../context/Task Context";
   if (tasks.length ===0) return (<h1>No Tasks</h1>)
     
     return (
-        <div>
+        <div className="grid grid-cols-3 gap-2">
           {tasks.map((task)=>(
-            <div key={task._id}>
-              <h1>{task.title}</h1>
-              <p>{task.description}</p>
-          </div>
+           <TaskCard task={task} key={task._id}/>
           ))}
         </div>
     )
