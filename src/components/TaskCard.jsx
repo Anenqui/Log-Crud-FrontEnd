@@ -13,7 +13,7 @@ const {deleteTask}=useTasks()
                     <button onClick={()=>{
                         deleteTask(task._id)
                     }}>Delete</button>
-                    <Link to={'/tasks/${task._id}'}>Edit</Link>
+                    <Link to={`/tasks/${task._id}`}>Edit</Link>
                 </div>
             </header>
             <p className="text-slate-300">{task.description}</p>

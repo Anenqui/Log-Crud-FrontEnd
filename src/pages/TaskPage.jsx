@@ -4,10 +4,10 @@ import { useTasks } from "../context/Task Context";
 import TaskCard from "../components/TaskCard.jsx";
 
  function TaskPage(){
-  const {getTask, tasks}=useTasks();
+  const {getTasks, tasks}=useTasks();
 
   useEffect(()=>{
-    getTask()
+    getTasks()
   },[]);
 
   if (tasks.length ===0) return (<h1>No Tasks</h1>)
